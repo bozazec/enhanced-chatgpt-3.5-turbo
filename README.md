@@ -1,33 +1,24 @@
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 <!-- [![MIT License][license-shield]][license-url] -->
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
 <div align="center">
-  <a href="https://github.com/subrotokumar/nyx/">
     <img src="./public/chat-gpt-logo.jpg" alt="Logo" width="80" height="80">
-  </a>
 
-  <h3 align="center">Enhanced ChatGPT : ChatGPT 2.0</h3>
+  <h3 align="center">Enhanced ChatGPT : ChatGPT 2.0 with improvements</h3>
 
   <p align="center">
-    AI chat application powered by OpenAI 
+    AI chat application powered by OpenAI
     <br />
-    <a href="https://enhanced-chatgpt-zeta.vercel.app/"><strong>Open <strong>Application</strong> »</strong></a>
+    Forked from <a href="https://github.com/subrotokumar/enhanced-chatgpt">here</a>
     <br />
     <br />
-    <a href="https://github.com/subrotokumar/nyx">View Demo</a>
+    <a href="https://github.com/bozazec/enhanced-chatgpt-3.5-turbo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/subrotokumar/nyx/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/subrotokumar/enhanced-chatgpt/issues">Request Feature</a>
+    <a href="https://github.com/bozazec/enhanced-chatgpt-3.5-turbo/issues">Request Feature</a>
   </p>
 </div>
 
@@ -183,38 +174,5 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- LICENSE -->
 
-<!-- CONTACT -->
-
-## Contact
-
-Subroto Kumar - [@subrotokr](https://twitter.com/subrotokr) - subrotokumar@outlook.in
-
-Project Link: [https://github.com/subrotokumar/enhanced-chatgpt](https://github.com/subrotokumar/enhanced-chatgpt)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- OpenAI
-- icon8
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/subrotokumar/enhanced-chatgpt.svg?style=for-the-badge
-[contributors-url]: https://github.com/subrotokumar/enhanced-chatgpt/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/subrotokumar/enhanced-chatgpt.svg?style=for-the-badge
-[forks-url]: https://github.com/subrotokumar/enhanced-chatgpt/network/members
-[stars-shield]: https://img.shields.io/github/stars/subrotokumar/nyx.svg?style=for-the-badge
-[stars-url]: https://github.com/subrotokumar/nyx/stargazers
-[issues-shield]: https://img.shields.io/github/issues/subrotokumar/nyx.svg?style=for-the-badge
-[issues-url]: https://github.com/subrotokumar/nyx/issues
-[license-shield]: https://img.shields.io/github/license/subrotokumar/nyx.svg?style=for-the-badge
-[license-url]: https://www.linkedin.com/in/kumarsubroto
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/kumarsubroto
-[product-screenshot]: ./assets/images/banner.png
+[linkedin-url]: https://www.linkedin.com/in/bozidar-zecevic/
