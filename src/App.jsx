@@ -20,7 +20,7 @@ function App() {
   const [chatLog, setChatLog] = useState([
     {
       role: ASSISTANT_ROLE,
-      content: "How can I help you?",
+      content: "Intialzation...",
     },
   ]);
 
@@ -28,22 +28,45 @@ function App() {
   const temperature = [0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
   const [models, setModels] = useState([]);
 
+  const initiateAI = async () => {
+    const response = await openai.createCompletion({
+      model: currentModel,
+      prompt: `The following is a conversation with an AI ${ASSISTANT_ROLE}. The ${ASSISTANT_ROLE} is helpful, creative, clever, and very friendly.\n\n${USER_ROLE}: Hello.\n`,
+      max_tokens: MAX_TOKENS,
+      temperature: 0.5,
+      // stop: [` ${USER_ROLE}:`, ` ${ASSISTANT_ROLE}:`],
+    });
+
+    if (response) {
+      setChatLog([
+        {
+          role: ASSISTANT_ROLE,
+          content: response.data.choices[0].text
+            .toString()
+            .replace("\n\n", "\n"),
+        },
+      ]);
+    } else {
+      console.log(response);
+    }
+  };
+
   useEffect(() => {
     getEngines();
+    initiateAI();
   }, []);
 
   const clearChat = () =>
     setChatLog([
       {
         role: ASSISTANT_ROLE,
-        content: "How can I help you?",
+        content: `The following is a conversation with an AI ${ASSISTANT_ROLE}. The ${ASSISTANT_ROLE} is helpful, creative, clever, and very friendly.\n\n${USER_ROLE}: Hello, who are you?\n${ASSISTANT_ROLE}: I am an AI created by OpenAI. How can I help you today?\n${USER_ROLE}: `,
+        stop: [` ${USER_ROLE}:`, ` ${ASSISTANT_ROLE}:`],
       },
     ]);
 
   function getEngines() {
-    const response = openai
-      .listEngines()
-      .then((res) => setModels(res.data.data));
+    openai.listEngines().then((res) => setModels(res.data.data));
   }
 
   async function handleSubmit(e) {
@@ -57,7 +80,7 @@ function App() {
     if (isGpt35) {
       response = await openai.createChatCompletion({
         model: currentModel,
-        messages: newChatLog,
+        messages: [{ role: USER_ROLE, content: input }],
         max_tokens: MAX_TOKENS,
         temperature: currentTemperature,
       });
